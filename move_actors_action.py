@@ -1,9 +1,10 @@
-from game.scripting.action import Action
+from action import Action
 
 
 # TODO: Implement MoveActorsAction class here!
-def MoveActoresAction(Action):
+def MoveActorsAction(Action):
   
+          
   def execute(self, cast, script):
     actors = cast.get_all_actors()
     for actor in actors:

@@ -1,4 +1,4 @@
-from game.scripting.action import Action
+from action import Action
 
 
 class DrawActorsAction(Action):

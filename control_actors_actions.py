@@ -1,6 +1,6 @@
 import constants
-from game.scripting.action import Action
-from game.shared.point import Point
+from action import Action
+from point import Point
 
 
 class ControlActorsAction(Action):
@@ -30,20 +30,20 @@ class ControlActorsAction(Action):
             script (Script): The script of Actions in the game.
         """
         # left
-        if self._keyboard_service.is_key_down('a'):
+        if self._keyboard_service.is_key_down('W'):
             self._direction = Point(-constants.CELL_SIZE, 0)
         
         # right
-        if self._keyboard_service.is_key_down('d'):
+        if self._keyboard_service.is_key_down('S'):
             self._direction = Point(constants.CELL_SIZE, 0)
         
         # up
-        if self._keyboard_service.is_key_down('w'):
+        if self._keyboard_service.is_key_down('A'):
             self._direction = Point(0, -constants.CELL_SIZE)
         
         # down
-        if self._keyboard_service.is_key_down('s'):
+        if self._keyboard_service.is_key_down('D'):
             self._direction = Point(0, constants.CELL_SIZE)
         
-        snake = cast.get_first_actor("snakes")
-        snake.turn_head(self._direction)
+        cycle = cast.get_first_actor("cycle")
+        cycle.turn_head(self._direction)

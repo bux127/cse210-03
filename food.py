@@ -1,7 +1,7 @@
 import random
 import constants
-from game.casting.actor import Actor
-from game.shared.point import Point
+from actor import Actor
+from point import Point
 
 
 class Food(Actor):

@@ -1,19 +1,20 @@
 import constants
-from game.casting.actor import Actor
-from game.shared.point import Point
+from actor import Actor
+from point import Point
 
 
-class Snake(Actor):
+class Cycle(Actor):
     """
     A long limbless reptile.
     
-    The responsibility of Snake is to move itself.
+    The responsibility of the 2 cycles is to move themselves.
 
     Attributes:
         _points (int): The number of points the food is worth.
     """
-    def __init__(self):
+    def __init__(self, color):
         super().__init__()
+        self._cycle_color = color
         self._segments = []
         self._prepare_body()
 
